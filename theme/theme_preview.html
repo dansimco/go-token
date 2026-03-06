@@ -130,6 +130,38 @@
   --critical-rev-surface-bg-hover: light-dark(#53210E, #190B03);
   --critical-rev-surface-bg-pressed: light-dark(#7B2D0F, #190B03);
   --critical-rev-surface-bg-focus: light-dark(#A6390E, #190B03);
+  --tint-1-rev-content-highlight: light-dark(#FFFFD8, #080A00);
+  --tint-1-rev-content-highlight-hover: light-dark(#FFFFCA, #FFFFD8);
+  --tint-1-rev-content-highlight-pressed: light-dark(#FFFFCA, #FFFFCA);
+  --tint-1-rev-content-highlight-focus: light-dark(#FFFFCA, #FFFFCA);
+  --tint-1-rev-content: light-dark(#FFFFC2, #2B2D17);
+  --tint-1-rev-content-hover: light-dark(#FEFFAF, #FEFFAF);
+  --tint-1-rev-content-pressed: light-dark(#FEFFAF, #FEFFAF);
+  --tint-1-rev-content-focus: light-dark(#FEFFAF, #FEFFAF);
+  --tint-1-rev-content-secondary: light-dark(#FEFFAF, #383A1D);
+  --tint-1-rev-content-secondary-hover: light-dark(#FDFFA1, #FDFFA1);
+  --tint-1-rev-content-secondary-pressed: light-dark(#FDFFA1, #FDFFA1);
+  --tint-1-rev-content-secondary-focus: light-dark(#FDFFA1, #FDFFA1);
+  --tint-1-rev-trim: light-dark(#D0D55C, #D0D55C);
+  --tint-1-rev-trim-hover: light-dark(#D0D55C, #D0D55C);
+  --tint-1-rev-trim-pressed: light-dark(#D0D55C, #D0D55C);
+  --tint-1-rev-trim-focus: light-dark(#D0D55C, #D0D55C);
+  --tint-1-rev-surface: light-dark(#DDE361, #DDE361);
+  --tint-1-rev-surface-hover: light-dark(#F9FF74, #F9FF74);
+  --tint-1-rev-surface-pressed: light-dark(#F9FF74, #F9FF74);
+  --tint-1-rev-surface-focus: light-dark(#F9FF74, #F9FF74);
+  --tint-1-rev-surface-low: light-dark(#C2C856, #D3D95D);
+  --tint-1-rev-surface-low-hover: light-dark(#C2C856, #1C1C0E);
+  --tint-1-rev-surface-low-pressed: light-dark(#C2C856, #1C1C0E);
+  --tint-1-rev-surface-low-focus: light-dark(#C2C856, #1C1C0E);
+  --tint-1-rev-surface-high: light-dark(#999E46, #999E46);
+  --tint-1-rev-surface-high-hover: light-dark(#4D5026, #32331A);
+  --tint-1-rev-surface-high-pressed: light-dark(#727535, #32331A);
+  --tint-1-rev-surface-high-focus: light-dark(#999E46, #32331A);
+  --tint-1-rev-surface-bg: light-dark(#AEB34E, #919542);
+  --tint-1-rev-surface-bg-hover: light-dark(#4D5026, #19190C);
+  --tint-1-rev-surface-bg-pressed: light-dark(#727535, #19190C);
+  --tint-1-rev-surface-bg-focus: light-dark(#999E46, #19190C);
 }
    body {
 	 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -166,6 +198,8 @@
 
    .mode-preview {
    	font-size: 0.7rem;
+    overflow: hidden;
+    border-radius: 0.25rem;
 
     & .bg-container {
     	padding: 0.5rem;
@@ -182,56 +216,56 @@
 <main>
 <section id="colors">
 <h2>neutral</h2>
-<div class="mode-preview"><div class="bg-container" style="background-color: var(--neutral-surface);"><p style="color: var(--neutral-content-highlight);"><strong>content-highlight</strong> on surface</p><p style="color: var(--neutral-content);"><strong>content</strong> on surface</p><p style="color: var(--neutral-content-secondary);"><strong>content-secondary</strong> on surface</p></div><div class="bg-container" style="background-color: var(--neutral-surface-low);"><p style="color: var(--neutral-content-highlight);"><strong>content-highlight</strong> on surface-low</p><p style="color: var(--neutral-content);"><strong>content</strong> on surface-low</p><p style="color: var(--neutral-content-secondary);"><strong>content-secondary</strong> on surface-low</p></div><div class="bg-container" style="background-color: var(--neutral-surface-high);"><p style="color: var(--neutral-content-highlight);"><strong>content-highlight</strong> on surface-high</p><p style="color: var(--neutral-content);"><strong>content</strong> on surface-high</p><p style="color: var(--neutral-content-secondary);"><strong>content-secondary</strong> on surface-high</p></div><div class="bg-container" style="background-color: var(--neutral-surface-bg);"><p style="color: var(--neutral-content-highlight);"><strong>content-highlight</strong> on surface-bg</p><p style="color: var(--neutral-content);"><strong>content</strong> on surface-bg</p><p style="color: var(--neutral-content-secondary);"><strong>content-secondary</strong> on surface-bg</p></div></div><h3>content-highlight</h3>
+<div class="mode-preview"><div class="bg-container" style="background-color: var(--neutral-surface);"><p style="color: var(--neutral-content-highlight);"><strong>content-highlight</strong> on surface</p><p style="color: var(--neutral-content);"><strong>content</strong> on surface</p><p style="color: var(--neutral-content-secondary);"><strong>content-secondary</strong> on surface</p></div><div class="bg-container" style="background-color: var(--neutral-surface-low);"><p style="color: var(--neutral-content-highlight);"><strong>content-highlight</strong> on surface-low</p><p style="color: var(--neutral-content);"><strong>content</strong> on surface-low</p><p style="color: var(--neutral-content-secondary);"><strong>content-secondary</strong> on surface-low</p></div><div class="bg-container" style="background-color: var(--neutral-surface-high);"><p style="color: var(--neutral-content-highlight);"><strong>content-highlight</strong> on surface-high</p><p style="color: var(--neutral-content);"><strong>content</strong> on surface-high</p><p style="color: var(--neutral-content-secondary);"><strong>content-secondary</strong> on surface-high</p></div><div class="bg-container" style="background-color: var(--neutral-surface-bg);"><p style="color: var(--neutral-content-highlight);"><strong>content-highlight</strong> on surface-bg</p><p style="color: var(--neutral-content);"><strong>content</strong> on surface-bg</p><p style="color: var(--neutral-content-secondary);"><strong>content-secondary</strong> on surface-bg</p></div></div><h5>content-highlight</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content-highlight" style="background-color: var(--neutral-content-highlight);"> default</div>
   <div class="swatch" title="content-highlight (hover)" style="background-color: var(--neutral-content-highlight-hover);"> hover</div>
   <div class="swatch" title="content-highlight (pressed)" style="background-color: var(--neutral-content-highlight-pressed);"> pressed</div>
   <div class="swatch" title="content-highlight (focus)" style="background-color: var(--neutral-content-highlight-focus);"> focus</div>
 </div>
-<h3>content</h3>
+<h5>content</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content" style="background-color: var(--neutral-content);"> default</div>
   <div class="swatch" title="content (hover)" style="background-color: var(--neutral-content-hover);"> hover</div>
   <div class="swatch" title="content (pressed)" style="background-color: var(--neutral-content-pressed);"> pressed</div>
   <div class="swatch" title="content (focus)" style="background-color: var(--neutral-content-focus);"> focus</div>
 </div>
-<h3>content-secondary</h3>
+<h5>content-secondary</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content-secondary" style="background-color: var(--neutral-content-secondary);"> default</div>
   <div class="swatch" title="content-secondary (hover)" style="background-color: var(--neutral-content-secondary-hover);"> hover</div>
   <div class="swatch" title="content-secondary (pressed)" style="background-color: var(--neutral-content-secondary-pressed);"> pressed</div>
   <div class="swatch" title="content-secondary (focus)" style="background-color: var(--neutral-content-secondary-focus);"> focus</div>
 </div>
-<h3>trim</h3>
+<h5>trim</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="trim" style="background-color: var(--neutral-trim);"> default</div>
   <div class="swatch" title="trim (hover)" style="background-color: var(--neutral-trim-hover);"> hover</div>
   <div class="swatch" title="trim (pressed)" style="background-color: var(--neutral-trim-pressed);"> pressed</div>
   <div class="swatch" title="trim (focus)" style="background-color: var(--neutral-trim-focus);"> focus</div>
 </div>
-<h3>surface</h3>
+<h5>surface</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface" style="background-color: var(--neutral-surface);"> default</div>
   <div class="swatch" title="surface (hover)" style="background-color: var(--neutral-surface-hover);"> hover</div>
   <div class="swatch" title="surface (pressed)" style="background-color: var(--neutral-surface-pressed);"> pressed</div>
   <div class="swatch" title="surface (focus)" style="background-color: var(--neutral-surface-focus);"> focus</div>
 </div>
-<h3>surface-low</h3>
+<h5>surface-low</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-low" style="background-color: var(--neutral-surface-low);"> default</div>
   <div class="swatch" title="surface-low (hover)" style="background-color: var(--neutral-surface-low-hover);"> hover</div>
   <div class="swatch" title="surface-low (pressed)" style="background-color: var(--neutral-surface-low-pressed);"> pressed</div>
   <div class="swatch" title="surface-low (focus)" style="background-color: var(--neutral-surface-low-focus);"> focus</div>
 </div>
-<h3>surface-high</h3>
+<h5>surface-high</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-high" style="background-color: var(--neutral-surface-high);"> default</div>
   <div class="swatch" title="surface-high (hover)" style="background-color: var(--neutral-surface-high-hover);"> hover</div>
   <div class="swatch" title="surface-high (pressed)" style="background-color: var(--neutral-surface-high-pressed);"> pressed</div>
   <div class="swatch" title="surface-high (focus)" style="background-color: var(--neutral-surface-high-focus);"> focus</div>
 </div>
-<h3>surface-bg</h3>
+<h5>surface-bg</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-bg" style="background-color: var(--neutral-surface-bg);"> default</div>
   <div class="swatch" title="surface-bg (hover)" style="background-color: var(--neutral-surface-bg-hover);"> hover</div>
@@ -239,56 +273,56 @@
   <div class="swatch" title="surface-bg (focus)" style="background-color: var(--neutral-surface-bg-focus);"> focus</div>
 </div>
 <h2>action</h2>
-<div class="mode-preview"><div class="bg-container" style="background-color: var(--action-surface);"><p style="color: var(--action-content-highlight);"><strong>content-highlight</strong> on surface</p><p style="color: var(--action-content);"><strong>content</strong> on surface</p><p style="color: var(--action-content-secondary);"><strong>content-secondary</strong> on surface</p></div><div class="bg-container" style="background-color: var(--action-surface-low);"><p style="color: var(--action-content-highlight);"><strong>content-highlight</strong> on surface-low</p><p style="color: var(--action-content);"><strong>content</strong> on surface-low</p><p style="color: var(--action-content-secondary);"><strong>content-secondary</strong> on surface-low</p></div><div class="bg-container" style="background-color: var(--action-surface-high);"><p style="color: var(--action-content-highlight);"><strong>content-highlight</strong> on surface-high</p><p style="color: var(--action-content);"><strong>content</strong> on surface-high</p><p style="color: var(--action-content-secondary);"><strong>content-secondary</strong> on surface-high</p></div><div class="bg-container" style="background-color: var(--action-surface-bg);"><p style="color: var(--action-content-highlight);"><strong>content-highlight</strong> on surface-bg</p><p style="color: var(--action-content);"><strong>content</strong> on surface-bg</p><p style="color: var(--action-content-secondary);"><strong>content-secondary</strong> on surface-bg</p></div></div><h3>content-highlight</h3>
+<div class="mode-preview"><div class="bg-container" style="background-color: var(--action-surface);"><p style="color: var(--action-content-highlight);"><strong>content-highlight</strong> on surface</p><p style="color: var(--action-content);"><strong>content</strong> on surface</p><p style="color: var(--action-content-secondary);"><strong>content-secondary</strong> on surface</p></div><div class="bg-container" style="background-color: var(--action-surface-low);"><p style="color: var(--action-content-highlight);"><strong>content-highlight</strong> on surface-low</p><p style="color: var(--action-content);"><strong>content</strong> on surface-low</p><p style="color: var(--action-content-secondary);"><strong>content-secondary</strong> on surface-low</p></div><div class="bg-container" style="background-color: var(--action-surface-high);"><p style="color: var(--action-content-highlight);"><strong>content-highlight</strong> on surface-high</p><p style="color: var(--action-content);"><strong>content</strong> on surface-high</p><p style="color: var(--action-content-secondary);"><strong>content-secondary</strong> on surface-high</p></div><div class="bg-container" style="background-color: var(--action-surface-bg);"><p style="color: var(--action-content-highlight);"><strong>content-highlight</strong> on surface-bg</p><p style="color: var(--action-content);"><strong>content</strong> on surface-bg</p><p style="color: var(--action-content-secondary);"><strong>content-secondary</strong> on surface-bg</p></div></div><h5>content-highlight</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content-highlight" style="background-color: var(--action-content-highlight);"> default</div>
   <div class="swatch" title="content-highlight (hover)" style="background-color: var(--action-content-highlight-hover);"> hover</div>
   <div class="swatch" title="content-highlight (pressed)" style="background-color: var(--action-content-highlight-pressed);"> pressed</div>
   <div class="swatch" title="content-highlight (focus)" style="background-color: var(--action-content-highlight-focus);"> focus</div>
 </div>
-<h3>content</h3>
+<h5>content</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content" style="background-color: var(--action-content);"> default</div>
   <div class="swatch" title="content (hover)" style="background-color: var(--action-content-hover);"> hover</div>
   <div class="swatch" title="content (pressed)" style="background-color: var(--action-content-pressed);"> pressed</div>
   <div class="swatch" title="content (focus)" style="background-color: var(--action-content-focus);"> focus</div>
 </div>
-<h3>content-secondary</h3>
+<h5>content-secondary</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content-secondary" style="background-color: var(--action-content-secondary);"> default</div>
   <div class="swatch" title="content-secondary (hover)" style="background-color: var(--action-content-secondary-hover);"> hover</div>
   <div class="swatch" title="content-secondary (pressed)" style="background-color: var(--action-content-secondary-pressed);"> pressed</div>
   <div class="swatch" title="content-secondary (focus)" style="background-color: var(--action-content-secondary-focus);"> focus</div>
 </div>
-<h3>trim</h3>
+<h5>trim</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="trim" style="background-color: var(--action-trim);"> default</div>
   <div class="swatch" title="trim (hover)" style="background-color: var(--action-trim-hover);"> hover</div>
   <div class="swatch" title="trim (pressed)" style="background-color: var(--action-trim-pressed);"> pressed</div>
   <div class="swatch" title="trim (focus)" style="background-color: var(--action-trim-focus);"> focus</div>
 </div>
-<h3>surface</h3>
+<h5>surface</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface" style="background-color: var(--action-surface);"> default</div>
   <div class="swatch" title="surface (hover)" style="background-color: var(--action-surface-hover);"> hover</div>
   <div class="swatch" title="surface (pressed)" style="background-color: var(--action-surface-pressed);"> pressed</div>
   <div class="swatch" title="surface (focus)" style="background-color: var(--action-surface-focus);"> focus</div>
 </div>
-<h3>surface-low</h3>
+<h5>surface-low</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-low" style="background-color: var(--action-surface-low);"> default</div>
   <div class="swatch" title="surface-low (hover)" style="background-color: var(--action-surface-low-hover);"> hover</div>
   <div class="swatch" title="surface-low (pressed)" style="background-color: var(--action-surface-low-pressed);"> pressed</div>
   <div class="swatch" title="surface-low (focus)" style="background-color: var(--action-surface-low-focus);"> focus</div>
 </div>
-<h3>surface-high</h3>
+<h5>surface-high</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-high" style="background-color: var(--action-surface-high);"> default</div>
   <div class="swatch" title="surface-high (hover)" style="background-color: var(--action-surface-high-hover);"> hover</div>
   <div class="swatch" title="surface-high (pressed)" style="background-color: var(--action-surface-high-pressed);"> pressed</div>
   <div class="swatch" title="surface-high (focus)" style="background-color: var(--action-surface-high-focus);"> focus</div>
 </div>
-<h3>surface-bg</h3>
+<h5>surface-bg</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-bg" style="background-color: var(--action-surface-bg);"> default</div>
   <div class="swatch" title="surface-bg (hover)" style="background-color: var(--action-surface-bg-hover);"> hover</div>
@@ -296,56 +330,56 @@
   <div class="swatch" title="surface-bg (focus)" style="background-color: var(--action-surface-bg-focus);"> focus</div>
 </div>
 <h2>action-rev</h2>
-<div class="mode-preview"><div class="bg-container" style="background-color: var(--action-rev-surface);"><p style="color: var(--action-rev-content-highlight);"><strong>content-highlight</strong> on surface</p><p style="color: var(--action-rev-content);"><strong>content</strong> on surface</p><p style="color: var(--action-rev-content-secondary);"><strong>content-secondary</strong> on surface</p></div><div class="bg-container" style="background-color: var(--action-rev-surface-low);"><p style="color: var(--action-rev-content-highlight);"><strong>content-highlight</strong> on surface-low</p><p style="color: var(--action-rev-content);"><strong>content</strong> on surface-low</p><p style="color: var(--action-rev-content-secondary);"><strong>content-secondary</strong> on surface-low</p></div><div class="bg-container" style="background-color: var(--action-rev-surface-high);"><p style="color: var(--action-rev-content-highlight);"><strong>content-highlight</strong> on surface-high</p><p style="color: var(--action-rev-content);"><strong>content</strong> on surface-high</p><p style="color: var(--action-rev-content-secondary);"><strong>content-secondary</strong> on surface-high</p></div><div class="bg-container" style="background-color: var(--action-rev-surface-bg);"><p style="color: var(--action-rev-content-highlight);"><strong>content-highlight</strong> on surface-bg</p><p style="color: var(--action-rev-content);"><strong>content</strong> on surface-bg</p><p style="color: var(--action-rev-content-secondary);"><strong>content-secondary</strong> on surface-bg</p></div></div><h3>content-highlight</h3>
+<div class="mode-preview"><div class="bg-container" style="background-color: var(--action-rev-surface);"><p style="color: var(--action-rev-content-highlight);"><strong>content-highlight</strong> on surface</p><p style="color: var(--action-rev-content);"><strong>content</strong> on surface</p><p style="color: var(--action-rev-content-secondary);"><strong>content-secondary</strong> on surface</p></div><div class="bg-container" style="background-color: var(--action-rev-surface-low);"><p style="color: var(--action-rev-content-highlight);"><strong>content-highlight</strong> on surface-low</p><p style="color: var(--action-rev-content);"><strong>content</strong> on surface-low</p><p style="color: var(--action-rev-content-secondary);"><strong>content-secondary</strong> on surface-low</p></div><div class="bg-container" style="background-color: var(--action-rev-surface-high);"><p style="color: var(--action-rev-content-highlight);"><strong>content-highlight</strong> on surface-high</p><p style="color: var(--action-rev-content);"><strong>content</strong> on surface-high</p><p style="color: var(--action-rev-content-secondary);"><strong>content-secondary</strong> on surface-high</p></div><div class="bg-container" style="background-color: var(--action-rev-surface-bg);"><p style="color: var(--action-rev-content-highlight);"><strong>content-highlight</strong> on surface-bg</p><p style="color: var(--action-rev-content);"><strong>content</strong> on surface-bg</p><p style="color: var(--action-rev-content-secondary);"><strong>content-secondary</strong> on surface-bg</p></div></div><h5>content-highlight</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content-highlight" style="background-color: var(--action-rev-content-highlight);"> default</div>
   <div class="swatch" title="content-highlight (hover)" style="background-color: var(--action-rev-content-highlight-hover);"> hover</div>
   <div class="swatch" title="content-highlight (pressed)" style="background-color: var(--action-rev-content-highlight-pressed);"> pressed</div>
   <div class="swatch" title="content-highlight (focus)" style="background-color: var(--action-rev-content-highlight-focus);"> focus</div>
 </div>
-<h3>content</h3>
+<h5>content</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content" style="background-color: var(--action-rev-content);"> default</div>
   <div class="swatch" title="content (hover)" style="background-color: var(--action-rev-content-hover);"> hover</div>
   <div class="swatch" title="content (pressed)" style="background-color: var(--action-rev-content-pressed);"> pressed</div>
   <div class="swatch" title="content (focus)" style="background-color: var(--action-rev-content-focus);"> focus</div>
 </div>
-<h3>content-secondary</h3>
+<h5>content-secondary</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content-secondary" style="background-color: var(--action-rev-content-secondary);"> default</div>
   <div class="swatch" title="content-secondary (hover)" style="background-color: var(--action-rev-content-secondary-hover);"> hover</div>
   <div class="swatch" title="content-secondary (pressed)" style="background-color: var(--action-rev-content-secondary-pressed);"> pressed</div>
   <div class="swatch" title="content-secondary (focus)" style="background-color: var(--action-rev-content-secondary-focus);"> focus</div>
 </div>
-<h3>trim</h3>
+<h5>trim</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="trim" style="background-color: var(--action-rev-trim);"> default</div>
   <div class="swatch" title="trim (hover)" style="background-color: var(--action-rev-trim-hover);"> hover</div>
   <div class="swatch" title="trim (pressed)" style="background-color: var(--action-rev-trim-pressed);"> pressed</div>
   <div class="swatch" title="trim (focus)" style="background-color: var(--action-rev-trim-focus);"> focus</div>
 </div>
-<h3>surface</h3>
+<h5>surface</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface" style="background-color: var(--action-rev-surface);"> default</div>
   <div class="swatch" title="surface (hover)" style="background-color: var(--action-rev-surface-hover);"> hover</div>
   <div class="swatch" title="surface (pressed)" style="background-color: var(--action-rev-surface-pressed);"> pressed</div>
   <div class="swatch" title="surface (focus)" style="background-color: var(--action-rev-surface-focus);"> focus</div>
 </div>
-<h3>surface-low</h3>
+<h5>surface-low</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-low" style="background-color: var(--action-rev-surface-low);"> default</div>
   <div class="swatch" title="surface-low (hover)" style="background-color: var(--action-rev-surface-low-hover);"> hover</div>
   <div class="swatch" title="surface-low (pressed)" style="background-color: var(--action-rev-surface-low-pressed);"> pressed</div>
   <div class="swatch" title="surface-low (focus)" style="background-color: var(--action-rev-surface-low-focus);"> focus</div>
 </div>
-<h3>surface-high</h3>
+<h5>surface-high</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-high" style="background-color: var(--action-rev-surface-high);"> default</div>
   <div class="swatch" title="surface-high (hover)" style="background-color: var(--action-rev-surface-high-hover);"> hover</div>
   <div class="swatch" title="surface-high (pressed)" style="background-color: var(--action-rev-surface-high-pressed);"> pressed</div>
   <div class="swatch" title="surface-high (focus)" style="background-color: var(--action-rev-surface-high-focus);"> focus</div>
 </div>
-<h3>surface-bg</h3>
+<h5>surface-bg</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-bg" style="background-color: var(--action-rev-surface-bg);"> default</div>
   <div class="swatch" title="surface-bg (hover)" style="background-color: var(--action-rev-surface-bg-hover);"> hover</div>
@@ -353,61 +387,118 @@
   <div class="swatch" title="surface-bg (focus)" style="background-color: var(--action-rev-surface-bg-focus);"> focus</div>
 </div>
 <h2>critical-rev</h2>
-<div class="mode-preview"><div class="bg-container" style="background-color: var(--critical-rev-surface);"><p style="color: var(--critical-rev-content-highlight);"><strong>content-highlight</strong> on surface</p><p style="color: var(--critical-rev-content);"><strong>content</strong> on surface</p><p style="color: var(--critical-rev-content-secondary);"><strong>content-secondary</strong> on surface</p></div><div class="bg-container" style="background-color: var(--critical-rev-surface-low);"><p style="color: var(--critical-rev-content-highlight);"><strong>content-highlight</strong> on surface-low</p><p style="color: var(--critical-rev-content);"><strong>content</strong> on surface-low</p><p style="color: var(--critical-rev-content-secondary);"><strong>content-secondary</strong> on surface-low</p></div><div class="bg-container" style="background-color: var(--critical-rev-surface-high);"><p style="color: var(--critical-rev-content-highlight);"><strong>content-highlight</strong> on surface-high</p><p style="color: var(--critical-rev-content);"><strong>content</strong> on surface-high</p><p style="color: var(--critical-rev-content-secondary);"><strong>content-secondary</strong> on surface-high</p></div><div class="bg-container" style="background-color: var(--critical-rev-surface-bg);"><p style="color: var(--critical-rev-content-highlight);"><strong>content-highlight</strong> on surface-bg</p><p style="color: var(--critical-rev-content);"><strong>content</strong> on surface-bg</p><p style="color: var(--critical-rev-content-secondary);"><strong>content-secondary</strong> on surface-bg</p></div></div><h3>content-highlight</h3>
+<div class="mode-preview"><div class="bg-container" style="background-color: var(--critical-rev-surface);"><p style="color: var(--critical-rev-content-highlight);"><strong>content-highlight</strong> on surface</p><p style="color: var(--critical-rev-content);"><strong>content</strong> on surface</p><p style="color: var(--critical-rev-content-secondary);"><strong>content-secondary</strong> on surface</p></div><div class="bg-container" style="background-color: var(--critical-rev-surface-low);"><p style="color: var(--critical-rev-content-highlight);"><strong>content-highlight</strong> on surface-low</p><p style="color: var(--critical-rev-content);"><strong>content</strong> on surface-low</p><p style="color: var(--critical-rev-content-secondary);"><strong>content-secondary</strong> on surface-low</p></div><div class="bg-container" style="background-color: var(--critical-rev-surface-high);"><p style="color: var(--critical-rev-content-highlight);"><strong>content-highlight</strong> on surface-high</p><p style="color: var(--critical-rev-content);"><strong>content</strong> on surface-high</p><p style="color: var(--critical-rev-content-secondary);"><strong>content-secondary</strong> on surface-high</p></div><div class="bg-container" style="background-color: var(--critical-rev-surface-bg);"><p style="color: var(--critical-rev-content-highlight);"><strong>content-highlight</strong> on surface-bg</p><p style="color: var(--critical-rev-content);"><strong>content</strong> on surface-bg</p><p style="color: var(--critical-rev-content-secondary);"><strong>content-secondary</strong> on surface-bg</p></div></div><h5>content-highlight</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content-highlight" style="background-color: var(--critical-rev-content-highlight);"> default</div>
   <div class="swatch" title="content-highlight (hover)" style="background-color: var(--critical-rev-content-highlight-hover);"> hover</div>
   <div class="swatch" title="content-highlight (pressed)" style="background-color: var(--critical-rev-content-highlight-pressed);"> pressed</div>
   <div class="swatch" title="content-highlight (focus)" style="background-color: var(--critical-rev-content-highlight-focus);"> focus</div>
 </div>
-<h3>content</h3>
+<h5>content</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content" style="background-color: var(--critical-rev-content);"> default</div>
   <div class="swatch" title="content (hover)" style="background-color: var(--critical-rev-content-hover);"> hover</div>
   <div class="swatch" title="content (pressed)" style="background-color: var(--critical-rev-content-pressed);"> pressed</div>
   <div class="swatch" title="content (focus)" style="background-color: var(--critical-rev-content-focus);"> focus</div>
 </div>
-<h3>content-secondary</h3>
+<h5>content-secondary</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="content-secondary" style="background-color: var(--critical-rev-content-secondary);"> default</div>
   <div class="swatch" title="content-secondary (hover)" style="background-color: var(--critical-rev-content-secondary-hover);"> hover</div>
   <div class="swatch" title="content-secondary (pressed)" style="background-color: var(--critical-rev-content-secondary-pressed);"> pressed</div>
   <div class="swatch" title="content-secondary (focus)" style="background-color: var(--critical-rev-content-secondary-focus);"> focus</div>
 </div>
-<h3>trim</h3>
+<h5>trim</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="trim" style="background-color: var(--critical-rev-trim);"> default</div>
   <div class="swatch" title="trim (hover)" style="background-color: var(--critical-rev-trim-hover);"> hover</div>
   <div class="swatch" title="trim (pressed)" style="background-color: var(--critical-rev-trim-pressed);"> pressed</div>
   <div class="swatch" title="trim (focus)" style="background-color: var(--critical-rev-trim-focus);"> focus</div>
 </div>
-<h3>surface</h3>
+<h5>surface</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface" style="background-color: var(--critical-rev-surface);"> default</div>
   <div class="swatch" title="surface (hover)" style="background-color: var(--critical-rev-surface-hover);"> hover</div>
   <div class="swatch" title="surface (pressed)" style="background-color: var(--critical-rev-surface-pressed);"> pressed</div>
   <div class="swatch" title="surface (focus)" style="background-color: var(--critical-rev-surface-focus);"> focus</div>
 </div>
-<h3>surface-low</h3>
+<h5>surface-low</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-low" style="background-color: var(--critical-rev-surface-low);"> default</div>
   <div class="swatch" title="surface-low (hover)" style="background-color: var(--critical-rev-surface-low-hover);"> hover</div>
   <div class="swatch" title="surface-low (pressed)" style="background-color: var(--critical-rev-surface-low-pressed);"> pressed</div>
   <div class="swatch" title="surface-low (focus)" style="background-color: var(--critical-rev-surface-low-focus);"> focus</div>
 </div>
-<h3>surface-high</h3>
+<h5>surface-high</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-high" style="background-color: var(--critical-rev-surface-high);"> default</div>
   <div class="swatch" title="surface-high (hover)" style="background-color: var(--critical-rev-surface-high-hover);"> hover</div>
   <div class="swatch" title="surface-high (pressed)" style="background-color: var(--critical-rev-surface-high-pressed);"> pressed</div>
   <div class="swatch" title="surface-high (focus)" style="background-color: var(--critical-rev-surface-high-focus);"> focus</div>
 </div>
-<h3>surface-bg</h3>
+<h5>surface-bg</h4>
 <div class="color-role-swatches">
   <div class="swatch" title="surface-bg" style="background-color: var(--critical-rev-surface-bg);"> default</div>
   <div class="swatch" title="surface-bg (hover)" style="background-color: var(--critical-rev-surface-bg-hover);"> hover</div>
   <div class="swatch" title="surface-bg (pressed)" style="background-color: var(--critical-rev-surface-bg-pressed);"> pressed</div>
   <div class="swatch" title="surface-bg (focus)" style="background-color: var(--critical-rev-surface-bg-focus);"> focus</div>
+</div>
+<h2>tint-1-rev</h2>
+<div class="mode-preview"><div class="bg-container" style="background-color: var(--tint-1-rev-surface);"><p style="color: var(--tint-1-rev-content-highlight);"><strong>content-highlight</strong> on surface</p><p style="color: var(--tint-1-rev-content);"><strong>content</strong> on surface</p><p style="color: var(--tint-1-rev-content-secondary);"><strong>content-secondary</strong> on surface</p></div><div class="bg-container" style="background-color: var(--tint-1-rev-surface-low);"><p style="color: var(--tint-1-rev-content-highlight);"><strong>content-highlight</strong> on surface-low</p><p style="color: var(--tint-1-rev-content);"><strong>content</strong> on surface-low</p><p style="color: var(--tint-1-rev-content-secondary);"><strong>content-secondary</strong> on surface-low</p></div><div class="bg-container" style="background-color: var(--tint-1-rev-surface-high);"><p style="color: var(--tint-1-rev-content-highlight);"><strong>content-highlight</strong> on surface-high</p><p style="color: var(--tint-1-rev-content);"><strong>content</strong> on surface-high</p><p style="color: var(--tint-1-rev-content-secondary);"><strong>content-secondary</strong> on surface-high</p></div><div class="bg-container" style="background-color: var(--tint-1-rev-surface-bg);"><p style="color: var(--tint-1-rev-content-highlight);"><strong>content-highlight</strong> on surface-bg</p><p style="color: var(--tint-1-rev-content);"><strong>content</strong> on surface-bg</p><p style="color: var(--tint-1-rev-content-secondary);"><strong>content-secondary</strong> on surface-bg</p></div></div><h5>content-highlight</h4>
+<div class="color-role-swatches">
+  <div class="swatch" title="content-highlight" style="background-color: var(--tint-1-rev-content-highlight);"> default</div>
+  <div class="swatch" title="content-highlight (hover)" style="background-color: var(--tint-1-rev-content-highlight-hover);"> hover</div>
+  <div class="swatch" title="content-highlight (pressed)" style="background-color: var(--tint-1-rev-content-highlight-pressed);"> pressed</div>
+  <div class="swatch" title="content-highlight (focus)" style="background-color: var(--tint-1-rev-content-highlight-focus);"> focus</div>
+</div>
+<h5>content</h4>
+<div class="color-role-swatches">
+  <div class="swatch" title="content" style="background-color: var(--tint-1-rev-content);"> default</div>
+  <div class="swatch" title="content (hover)" style="background-color: var(--tint-1-rev-content-hover);"> hover</div>
+  <div class="swatch" title="content (pressed)" style="background-color: var(--tint-1-rev-content-pressed);"> pressed</div>
+  <div class="swatch" title="content (focus)" style="background-color: var(--tint-1-rev-content-focus);"> focus</div>
+</div>
+<h5>content-secondary</h4>
+<div class="color-role-swatches">
+  <div class="swatch" title="content-secondary" style="background-color: var(--tint-1-rev-content-secondary);"> default</div>
+  <div class="swatch" title="content-secondary (hover)" style="background-color: var(--tint-1-rev-content-secondary-hover);"> hover</div>
+  <div class="swatch" title="content-secondary (pressed)" style="background-color: var(--tint-1-rev-content-secondary-pressed);"> pressed</div>
+  <div class="swatch" title="content-secondary (focus)" style="background-color: var(--tint-1-rev-content-secondary-focus);"> focus</div>
+</div>
+<h5>trim</h4>
+<div class="color-role-swatches">
+  <div class="swatch" title="trim" style="background-color: var(--tint-1-rev-trim);"> default</div>
+  <div class="swatch" title="trim (hover)" style="background-color: var(--tint-1-rev-trim-hover);"> hover</div>
+  <div class="swatch" title="trim (pressed)" style="background-color: var(--tint-1-rev-trim-pressed);"> pressed</div>
+  <div class="swatch" title="trim (focus)" style="background-color: var(--tint-1-rev-trim-focus);"> focus</div>
+</div>
+<h5>surface</h4>
+<div class="color-role-swatches">
+  <div class="swatch" title="surface" style="background-color: var(--tint-1-rev-surface);"> default</div>
+  <div class="swatch" title="surface (hover)" style="background-color: var(--tint-1-rev-surface-hover);"> hover</div>
+  <div class="swatch" title="surface (pressed)" style="background-color: var(--tint-1-rev-surface-pressed);"> pressed</div>
+  <div class="swatch" title="surface (focus)" style="background-color: var(--tint-1-rev-surface-focus);"> focus</div>
+</div>
+<h5>surface-low</h4>
+<div class="color-role-swatches">
+  <div class="swatch" title="surface-low" style="background-color: var(--tint-1-rev-surface-low);"> default</div>
+  <div class="swatch" title="surface-low (hover)" style="background-color: var(--tint-1-rev-surface-low-hover);"> hover</div>
+  <div class="swatch" title="surface-low (pressed)" style="background-color: var(--tint-1-rev-surface-low-pressed);"> pressed</div>
+  <div class="swatch" title="surface-low (focus)" style="background-color: var(--tint-1-rev-surface-low-focus);"> focus</div>
+</div>
+<h5>surface-high</h4>
+<div class="color-role-swatches">
+  <div class="swatch" title="surface-high" style="background-color: var(--tint-1-rev-surface-high);"> default</div>
+  <div class="swatch" title="surface-high (hover)" style="background-color: var(--tint-1-rev-surface-high-hover);"> hover</div>
+  <div class="swatch" title="surface-high (pressed)" style="background-color: var(--tint-1-rev-surface-high-pressed);"> pressed</div>
+  <div class="swatch" title="surface-high (focus)" style="background-color: var(--tint-1-rev-surface-high-focus);"> focus</div>
+</div>
+<h5>surface-bg</h4>
+<div class="color-role-swatches">
+  <div class="swatch" title="surface-bg" style="background-color: var(--tint-1-rev-surface-bg);"> default</div>
+  <div class="swatch" title="surface-bg (hover)" style="background-color: var(--tint-1-rev-surface-bg-hover);"> hover</div>
+  <div class="swatch" title="surface-bg (pressed)" style="background-color: var(--tint-1-rev-surface-bg-pressed);"> pressed</div>
+  <div class="swatch" title="surface-bg (focus)" style="background-color: var(--tint-1-rev-surface-bg-focus);"> focus</div>
 </div>
 </section>
 </main>

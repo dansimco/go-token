@@ -24,8 +24,23 @@ func TestThemeCSS(t *testing.T) {
 	azimuth.AddKey("#6857DD", 0.4)
 	azimuth.AddKey("#05000f", 1)
 
+	electric := color.NewRamp()
+	electric.AddKey("#FFFFD8", 0)
+	electric.AddKey("#F8FF6C", 0.375)
+	electric.AddKey("#080a00", 1)
+
+	kelp := color.NewRamp()
+	kelp.AddKey("#EBFFE0", 0)
+	kelp.AddKey("#6E9B55", 0.53)
+	kelp.AddKey("#000000", 1)
+
+	seaFoam := color.NewRamp()
+	seaFoam.AddKey("#E2FFFF", 0)
+	seaFoam.AddKey("#7AD0D3", 0.375)
+	seaFoam.AddKey("#010511", 1)
+
 	//
-	// NEUTRAL
+	// neutral
 	// ----------------
 	neutral := theme.AddColorMode("neutral")
 
@@ -86,7 +101,7 @@ func TestThemeCSS(t *testing.T) {
 	neutral_background.AddState("focus", color.UIColor{Light: ink.At(0.6), Dark: ink.At(0.94)})
 
 	//
-	// ACTION
+	// action
 	// ----------------
 	action := theme.AddColorMode("action")
 
@@ -147,7 +162,7 @@ func TestThemeCSS(t *testing.T) {
 	action_background.AddState("focus", color.UIColor{Light: azimuth.At(0.6), Dark: azimuth.At(0.96)})
 
 	//
-	// ACTION REVERSED
+	// action reversed
 	// Light on dark colors for both light and dark mode
 	// ----------------
 	action_rev := theme.AddColorMode("action-rev")
@@ -209,8 +224,8 @@ func TestThemeCSS(t *testing.T) {
 	action_rev_background.AddState("focus", color.UIColor{Light: azimuth.At(0.6), Dark: azimuth.At(0.96)})
 
 	//
-	// critical REVERSED
-	// Light on dark colors for both light and dark mode
+	// critical reversed
+	// light on dark colors for both light and dark mode
 	// ----------------
 	critical_rev := theme.AddColorMode("critical-rev")
 
@@ -269,6 +284,68 @@ func TestThemeCSS(t *testing.T) {
 	critical_rev_background.AddState("hover", color.UIColor{Light: intlOrange.At(0.8), Dark: intlOrange.At(0.96)})
 	critical_rev_background.AddState("pressed", color.UIColor{Light: intlOrange.At(0.7), Dark: intlOrange.At(0.96)})
 	critical_rev_background.AddState("focus", color.UIColor{Light: intlOrange.At(0.6), Dark: intlOrange.At(0.96)})
+
+	//
+	// critical reversed
+	// light on dark colors for both light and dark mode
+	// ----------------
+	tint1_rev := theme.AddColorMode("tint-1-rev")
+
+	// highlight
+	tint1_rev_highlight := tint1_rev.AddRole("content-highlight")
+	tint1_rev_highlight.Context = "foreground"
+	tint1_rev_highlight.AddState("default", color.UIColor{Light: electric.At(0), Dark: electric.At(1)})
+	tint1_rev_highlight.AddState("hover", color.UIColor{Light: electric.At(0.05), Dark: electric.At(0)})
+	tint1_rev_highlight.AddState("pressed", color.UIColor{Light: electric.At(0.05), Dark: electric.At(0.05)})
+	tint1_rev_highlight.AddState("focus", color.UIColor{Light: electric.At(0.05), Dark: electric.At(0.05)})
+	// content
+	tint1_rev_content := tint1_rev.AddRole("content")
+	tint1_rev_content.Context = "foreground"
+	tint1_rev_content.AddState("default", color.UIColor{Light: electric.At(0.08), Dark: electric.At(0.9)})
+	tint1_rev_content.AddState("hover", color.UIColor{Light: electric.At(0.15), Dark: electric.At(0.15)})
+	tint1_rev_content.AddState("pressed", color.UIColor{Light: electric.At(0.15), Dark: electric.At(0.15)})
+	tint1_rev_content.AddState("focus", color.UIColor{Light: electric.At(0.15), Dark: electric.At(0.15)})
+	// secondary
+	tint1_rev_secondary := tint1_rev.AddRole("content-secondary")
+	tint1_rev_secondary.Context = "foreground"
+	tint1_rev_secondary.AddState("default", color.UIColor{Light: electric.At(0.15), Dark: electric.At(0.86)})
+	tint1_rev_secondary.AddState("hover", color.UIColor{Light: electric.At(0.2), Dark: electric.At(0.2)})
+	tint1_rev_secondary.AddState("pressed", color.UIColor{Light: electric.At(0.2), Dark: electric.At(0.2)})
+	tint1_rev_secondary.AddState("focus", color.UIColor{Light: electric.At(0.2), Dark: electric.At(0.2)})
+	// trim
+	tint1_rev_trim := tint1_rev.AddRole("trim")
+	tint1_rev_trim.AddState("default", color.UIColor{Light: electric.At(0.46875), Dark: electric.At(0.46875)})
+	tint1_rev_trim.AddState("hover", color.UIColor{Light: electric.At(0.46875), Dark: electric.At(0.46875)})
+	tint1_rev_trim.AddState("pressed", color.UIColor{Light: electric.At(0.46875), Dark: electric.At(0.46875)})
+	tint1_rev_trim.AddState("focus", color.UIColor{Light: electric.At(0.46875), Dark: electric.At(0.46875)})
+	// surface
+	tint1_rev_surface := tint1_rev.AddRole("surface")
+	tint1_rev_surface.Context = "background"
+	tint1_rev_surface.AddState("default", color.UIColor{Light: electric.At(0.4375), Dark: electric.At(0.4375)})
+	tint1_rev_surface.AddState("hover", color.UIColor{Light: electric.At(0.35), Dark: electric.At(0.35)})
+	tint1_rev_surface.AddState("pressed", color.UIColor{Light: electric.At(0.35), Dark: electric.At(0.35)})
+	tint1_rev_surface.AddState("focus", color.UIColor{Light: electric.At(0.35), Dark: electric.At(0.35)})
+	// surface_low
+	tint1_rev_surface_low := tint1_rev.AddRole("surface-low")
+	tint1_rev_surface_low.Context = "background"
+	tint1_rev_surface_low.AddState("default", color.UIColor{Light: electric.At(0.5), Dark: electric.At(0.46)})
+	tint1_rev_surface_low.AddState("hover", color.UIColor{Light: electric.At(0.5), Dark: electric.At(0.95)})
+	tint1_rev_surface_low.AddState("pressed", color.UIColor{Light: electric.At(0.5), Dark: electric.At(0.95)})
+	tint1_rev_surface_low.AddState("focus", color.UIColor{Light: electric.At(0.5), Dark: electric.At(0.95)})
+	// surface_high
+	tint1_rev_surface_high := tint1_rev.AddRole("surface-high")
+	tint1_rev_surface_high.Context = "background"
+	tint1_rev_surface_high.AddState("default", color.UIColor{Light: electric.At(0.6), Dark: electric.At(0.6)})
+	tint1_rev_surface_high.AddState("hover", color.UIColor{Light: electric.At(0.8), Dark: electric.At(0.88)})
+	tint1_rev_surface_high.AddState("pressed", color.UIColor{Light: electric.At(0.7), Dark: electric.At(0.88)})
+	tint1_rev_surface_high.AddState("focus", color.UIColor{Light: electric.At(0.6), Dark: electric.At(0.88)})
+	// background
+	tint1_rev_background := tint1_rev.AddRole("surface-bg")
+	tint1_rev_background.Context = "background"
+	tint1_rev_background.AddState("default", color.UIColor{Light: electric.At(0.55), Dark: electric.At(0.62)})
+	tint1_rev_background.AddState("hover", color.UIColor{Light: electric.At(0.8), Dark: electric.At(0.96)})
+	tint1_rev_background.AddState("pressed", color.UIColor{Light: electric.At(0.7), Dark: electric.At(0.96)})
+	tint1_rev_background.AddState("focus", color.UIColor{Light: electric.At(0.6), Dark: electric.At(0.96)})
 
 	css := theme.ToCSS()
 	println(css)

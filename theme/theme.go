@@ -108,6 +108,8 @@ func (t *Theme) GenerateHTMLPreview() string {
 
    .mode-preview {
    	font-size: 0.7rem;
+    overflow: hidden;
+    border-radius: 0.25rem;
 
     & .bg-container {
     	padding: 0.5rem;
@@ -142,7 +144,7 @@ func (t *Theme) GenerateHTMLPreview() string {
 		}
 		html += `</div>`
 		for _, role := range mode.Roles {
-			html += "<h3>" + role.Name + "</h3>\n"
+			html += "<h5>" + role.Name + "</h4>\n"
 			html += `<div class="color-role-swatches">` + "\n"
 
 			// Loop through all states in order
