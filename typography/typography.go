@@ -56,10 +56,10 @@ func (f *Family) ToCSS() string {
 			css += "\n"
 		}
 
-		css += "      weight: "
+		css += "      font-weight: "
 		if font.Weight != "" && font.Weight != "normal" {
-			// Use the Weight string field with quotes
-			css += "\"" + font.Weight + "\""
+			// Use the Weight string field without quotes
+			css += font.Weight
 		} else if font.WeightNumber != 0 {
 			// Convert int to string properly
 			weightStr := ""
@@ -73,6 +73,12 @@ func (f *Family) ToCSS() string {
 			css += "400"
 		}
 		css += ";\n"
+
+		// Add font-style if specified
+		if font.Style != "" && font.Style != "normal" && font.Style != "regular" {
+			css += "      font-style: " + font.Style + ";\n"
+		}
+
 		css += "    }"
 
 		// Add newline after closing brace except for the last font

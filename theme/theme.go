@@ -44,7 +44,7 @@ func (t *Theme) AddTypeFamily(name string) *typography.Family {
 		Name: name,
 	}
 	t.TypeFamilies = append(t.TypeFamilies, family)
-	return &family
+	return &t.TypeFamilies[len(t.TypeFamilies)-1]
 }
 
 func (t *Theme) AddTypeStyle(name string) *typography.Style {
@@ -56,7 +56,17 @@ func (t *Theme) AddTypeStyle(name string) *typography.Style {
 }
 
 func (t *Theme) ToCSS() string {
-	css := ":root {\n"
+	css := ""
+
+	// typography - @font-face declarations must be at top level, not inside :root
+	//
+	for _, family := range t.TypeFamilies {
+		css += family.ToCSS()
+		println("\n " + family.Name)
+		println(family.ToCSS())
+	}
+
+	css += ":root {\n"
 
 	// spacing tokens
 	for _, spaceToken := range t.SpaceTokens {

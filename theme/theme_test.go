@@ -2,6 +2,7 @@ package theme
 
 import (
 	"go-ds/color"
+	"go-ds/css_util"
 	"os"
 	"testing"
 )
@@ -14,17 +15,21 @@ func TestThemeCSS(t *testing.T) {
 
 	f_innovator := theme.AddTypeFamily("Innovator Grotesk")
 	innovator_regular := f_innovator.AddFont()
+	innovator_regular.AddLocalSrc("Innovator Grotesk")
 	innovator_regular.AddSrc("/assets/fonts/InnovatorGroteskRegular.otf")
 
 	innovator_regular_italic := f_innovator.AddFont()
+	innovator_regular.AddLocalSrc("Innovator Grotesk")
 	innovator_regular_italic.AddSrc("/assets/fonts/InnovatorGroteskItalic.otf")
 
 	innovator_regular_medium := f_innovator.AddFont()
+	innovator_regular.AddLocalSrc("Innovator Grotesk")
 	innovator_regular_medium.AddSrc("/assets/fonts/InnovatorGroteskMedium.otf")
 	innovator_regular_medium.Weight = "medium"
 	innovator_regular_medium.WeightNumber = 500
 
 	innovator_regular_medium_italic := f_innovator.AddFont()
+	innovator_regular.AddLocalSrc("Innovator Grotesk")
 	innovator_regular_medium_italic.AddSrc("/assets/fonts/InnovatorGroteskMediumItalic.otf")
 	innovator_regular_medium_italic.Weight = "medium"
 	innovator_regular_medium_italic.Style = "italic"
@@ -766,7 +771,7 @@ func TestThemeCSS(t *testing.T) {
 	tint3_rev_background.AddState("pressed", color.UIColor{Light: seaFoam.At(0.96), Dark: seaFoam.At(0.96)})
 	tint3_rev_background.AddState("focus", color.UIColor{Light: seaFoam.At(0.96), Dark: seaFoam.At(0.96)})
 
-	css := theme.ToCSS()
+	css := css_util.Format(theme.ToCSS())
 	println(css)
 
 	html := theme.GenerateHTMLPreview()
