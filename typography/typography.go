@@ -2,7 +2,8 @@ package typography
 
 import (
 	"fmt"
-	"go-token/css_util"
+
+	"github.com/dansimco/go-design-tokens/css_util"
 )
 
 type Family struct {

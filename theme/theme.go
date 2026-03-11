@@ -1,11 +1,12 @@
 package theme
 
 import (
-	"go-token/color"
-	"go-token/radius"
-	"go-token/spacing"
-	"go-token/typography"
 	"strconv"
+
+	"github.com/dansimco/go-design-tokens/color"
+	"github.com/dansimco/go-design-tokens/radius"
+	"github.com/dansimco/go-design-tokens/spacing"
+	"github.com/dansimco/go-design-tokens/typography"
 )
 
 type Theme struct {

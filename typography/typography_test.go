@@ -1,8 +1,9 @@
 package typography
 
 import (
-	"go-token/css_util"
 	"testing"
+
+	"github.com/dansimco/go-design-tokens/css_util"
 )
 
 type typographyTestInputData struct {

@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go-token/color"
+
+	"github.com/dansimco/go-design-tokens/color"
 )
 
 func main() {

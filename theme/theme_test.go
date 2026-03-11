@@ -1,10 +1,11 @@
 package theme
 
 import (
-	"go-token/color"
-	"go-token/css_util"
 	"os"
 	"testing"
+
+	"github.com/dansimco/go-design-tokens/color"
+	"github.com/dansimco/go-design-tokens/css_util"
 )
 
 func TestThemeCSS(t *testing.T) {
