@@ -13,6 +13,10 @@ func NewRole(name string) *Role {
 	}
 }
 
+func (r *Role) SetContext(context string) {
+	r.Context = context
+}
+
 func (r *Role) AddState(state string, color UIColor) {
 	color.Name = state
 	r.States = append(r.States, color)

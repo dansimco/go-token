@@ -21,7 +21,7 @@ type Theme struct {
 	TypeStyles      []typography.Style
 }
 
-func NewTheme() Theme {
+func New() Theme {
 	return Theme{}
 }
 
@@ -48,22 +48,20 @@ func (t *Theme) AddTypeFamily(name string) *typography.Family {
 }
 
 func (t *Theme) AddTypeStyle(name string) *typography.Style {
-	style := typography.Style{
-		Name: name,
-	}
+	style := typography.NewTypeStyle(name)
 	t.TypeStyles = append(t.TypeStyles, style)
-	return &style
+	return &t.TypeStyles[len(t.TypeStyles)-1]
 }
 
 func (t *Theme) ToCSS() string {
 	css := ""
 
-	// typography - @font-face declarations must be at top level, not inside :root
-	//
 	for _, family := range t.TypeFamilies {
 		css += family.ToCSS()
-		println("\n " + family.Name)
-		println(family.ToCSS())
+	}
+
+	for _, style := range t.TypeStyles {
+		css += style.ToCSS()
 	}
 
 	css += ":root {\n"
