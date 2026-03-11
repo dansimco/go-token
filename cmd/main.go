@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-ds/color"
+	"go-token/color"
 )
 
 func main() {

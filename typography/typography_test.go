@@ -1,7 +1,7 @@
 package typography
 
 import (
-	"go-ds/css_util"
+	"go-token/css_util"
 	"testing"
 )
 

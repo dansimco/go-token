@@ -1,10 +1,10 @@
 package theme
 
 import (
-	"go-ds/color"
-	"go-ds/radius"
-	"go-ds/spacing"
-	"go-ds/typography"
+	"go-token/color"
+	"go-token/radius"
+	"go-token/spacing"
+	"go-token/typography"
 	"strconv"
 )
 

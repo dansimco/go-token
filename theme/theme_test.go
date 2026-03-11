@@ -1,8 +1,8 @@
 package theme
 
 import (
-	"go-ds/color"
-	"go-ds/css_util"
+	"go-token/color"
+	"go-token/css_util"
 	"os"
 	"testing"
 )
