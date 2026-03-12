@@ -1,6 +1,6 @@
 package radius
 
-type NamedRadius struct {
+type RadiusToken struct {
 	Name         string
 	UnitMultiple float64
 }

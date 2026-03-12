@@ -15,15 +15,24 @@ type Theme struct {
 	SpacePrefix     string
 	SpaceTokens     []spacing.NamedSpace
 	RadiusPrefix    string
-	RadiusTokens    []radius.NamedRadius
+	RadiusTokens    []radius.RadiusToken
 	ColorPrefix     string
 	ColorModes      []color.Mode
+	TypePrefix      string
 	TypeFamilies    []typography.Family
 	TypeStyles      []typography.Style
 }
 
 func New() Theme {
-	return Theme{}
+	t := Theme{
+		SpacePrefix:     "sp-",
+		ColorPrefix:     "c-",
+		RadiusPrefix:    "radius-",
+		TypePrefix:      "t-",
+		BaseSpacingUnit: 16,
+		GridDivision:    0.25,
+	}
+	return t
 }
 
 func (t *Theme) AddColorMode(name string) *color.Mode {
@@ -33,7 +42,7 @@ func (t *Theme) AddColorMode(name string) *color.Mode {
 }
 
 func (t *Theme) AddRadiusToken(name string, unitMultiple float64) {
-	t.RadiusTokens = append(t.RadiusTokens, radius.NamedRadius{Name: name, UnitMultiple: unitMultiple})
+	t.RadiusTokens = append(t.RadiusTokens, radius.RadiusToken{Name: name, UnitMultiple: unitMultiple})
 }
 
 func (t *Theme) AddSpaceToken(name string, unitMultiple float64) {
@@ -67,9 +76,13 @@ func (t *Theme) ToCSS() string {
 
 	css += ":root {\n"
 
+	// radius tokens
+	for _, radiusToken := range t.RadiusTokens {
+		css += `  --` + t.RadiusPrefix + radiusToken.Name + `: ` + strconv.FormatFloat(radiusToken.UnitMultiple, 'f', -1, 64) + `rem;` + "\n"
+	}
 	// spacing tokens
 	for _, spaceToken := range t.SpaceTokens {
-		css += `  --` + t.SpacePrefix + `-` + spaceToken.Name + `: ` + strconv.FormatFloat(spaceToken.UnitMultiple, 'f', -1, 64) + `rem;` + "\n"
+		css += `  --` + t.SpacePrefix + spaceToken.Name + `: ` + strconv.FormatFloat(spaceToken.UnitMultiple, 'f', -1, 64) + `rem;` + "\n"
 	}
 	if t.GridDivision == 0 {
 		t.GridDivision = 0.25

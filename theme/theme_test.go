@@ -11,6 +11,10 @@ import (
 func TestThemeCSS(t *testing.T) {
 	theme := New()
 	theme.BaseSpacingUnit = 16
+	theme.ColorPrefix = "c-"
+	theme.SpacePrefix = "s-"
+	theme.TypePrefix = "t-"
+	theme.RadiusPrefix = "radius-"
 
 	// typography
 
@@ -48,6 +52,13 @@ func TestThemeCSS(t *testing.T) {
 	t_caption.SetSize(0.875)
 	t_caption.SetWeight("normal")
 	t_caption.SetLineHeight(1.5)
+
+	// radius
+
+	theme.AddRadiusToken("xs", 0.25)
+	theme.AddRadiusToken("s", 0.5)
+	theme.AddRadiusToken("m", 0.75)
+	theme.AddRadiusToken("ml", 1.25)
 
 	// spacing
 
