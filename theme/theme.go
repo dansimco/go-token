@@ -95,7 +95,13 @@ func (t *Theme) ToCSS() string {
 	for _, mode := range t.ColorModes {
 		css += mode.ToCSS()
 	}
-	css += "}"
+	css += "}\n\n"
+
+	// color mode classes
+	for _, mode := range t.ColorModes {
+		css += mode.ToCSSClass(t.ColorPrefix[:len(t.ColorPrefix)-1]) + "\n"
+	}
+
 	return css
 }
 
