@@ -8,7 +8,7 @@ This module is designed to streamline the creation of design systems. Docs to co
 
 #### Color Ramps
 
-![](doc/img/ramp.png)
+![](doc/img/ramp_extended.png)
 
 Color Ramps are the original motivation for this package. Rather than creating a rigid list of swatches (`orange-100`, `orange-200`) etc. One can simply create a ramp which blends from one color to another and pick anywhere on that gradient. 
 
