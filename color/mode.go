@@ -18,10 +18,14 @@ func (m *Mode) AddRole(name string) *Role {
 	return role
 }
 
-func (m *Mode) ToCSS() string {
+func (m *Mode) ToCSS(prefix string) string {
 	css := ""
+	varPrefix := "  --"
+	if prefix != "" {
+		varPrefix += prefix + "-"
+	}
 	for _, role := range m.Roles {
-		css += role.toCSS("  --" + m.Name)
+		css += role.toCSS(varPrefix + m.Name)
 	}
 	return css
 }

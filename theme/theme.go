@@ -93,7 +93,7 @@ func (t *Theme) ToCSS() string {
 	}
 	// color tokens
 	for _, mode := range t.ColorModes {
-		css += mode.ToCSS()
+		css += mode.ToCSS(t.ColorPrefix[:len(t.ColorPrefix)-1])
 	}
 	css += "}\n\n"
 
