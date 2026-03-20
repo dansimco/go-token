@@ -61,7 +61,8 @@ func TestCSSFontFaceGeneration(t *testing.T) {
 	  src:
         local("Helvetica Now"),
         url("/assets/fonts/helvetica_now_regular.woff2");
-      font-weight: "regular";
+      font-weight: regular;
+      font-style: normal;
     }
 
    	@font-face {
@@ -70,6 +71,7 @@ func TestCSSFontFaceGeneration(t *testing.T) {
         local("Helvetica Now"),
         url("/assets/fonts/helvetica_now_bold.woff2");
       font-weight: 600;
+      font-style: normal;
     }
 
 	`

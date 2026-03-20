@@ -96,7 +96,7 @@ func (s *Style) ToCSS() string {
 	// Add font-weight if specified
 
 	if s.UseNumberedWeight && s.WeightNumber != 0 {
-		css += `  font-weight: ` + string(s.WeightNumber) + ";\n"
+		css += fmt.Sprintf("  font-weight: %d;\n", s.WeightNumber)
 	}
 
 	if !s.UseNumberedWeight && s.Weight != "" {

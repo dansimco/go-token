@@ -31,13 +31,11 @@ func TestThemeCSS(t *testing.T) {
 	innovator_regular_medium := f_innovator.AddFont()
 	innovator_regular.AddLocalSrc("Innovator Grotesk")
 	innovator_regular_medium.AddSrc("/assets/fonts/InnovatorGroteskMedium.otf")
-	innovator_regular_medium.Weight = "normal"
-	innovator_regular_medium.WeightNumber = 500
+	innovator_regular_medium.SetWeightNumber(500)
 
 	innovator_regular_medium_italic := f_innovator.AddFont()
 	innovator_regular.AddLocalSrc("Innovator Grotesk")
 	innovator_regular_medium_italic.AddSrc("/assets/fonts/InnovatorGroteskMediumItalic.otf")
-	innovator_regular_medium_italic.SetWeight("normal")
 	innovator_regular_medium_italic.SetStyle("italic")
 	innovator_regular_medium_italic.SetWeightNumber(500)
 

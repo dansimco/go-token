@@ -1,6 +1,8 @@
 package typography
 
 import (
+	"fmt"
+
 	"github.com/dansimco/go-design-tokens/css_util"
 )
 
@@ -64,7 +66,7 @@ func (f *Family) ToCSS() string {
 		}
 
 		if font.UseNumberedWeight && font.WeightNumber != 0 {
-			css += `  font-weight: ` + string(font.WeightNumber) + ";\n"
+			css += fmt.Sprintf("  font-weight: %d;\n", font.WeightNumber)
 		}
 
 		if !font.UseNumberedWeight && font.Weight != "" {
@@ -108,6 +110,7 @@ func (f *Font) AddLocalSrc(fontName string) {
 
 func (f *Font) SetWeightNumber(weight int) {
 	f.WeightNumber = weight
+	f.UseNumberedWeight = true
 }
 
 func (f *Font) SetWeight(weight string) {
